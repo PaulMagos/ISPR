@@ -5,6 +5,6 @@ Assignment3/archive/*
 Assignment3/embeddings/*
 Assignment3/__pycache__/*
 Assignment3/ourModels/*
-Assignment3/ourModels2/*
+Assignment3/ourModelsLSTM/*
 Assignment3/Models/*
 *ktModels*
