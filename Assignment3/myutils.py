@@ -28,16 +28,16 @@ def initDF():
     allNews.apply(lambda x: x.astype(str).str.lower())
     return allNews
 
-def unbalance(df, labels, kind = 0):
-    if os.path.exists(f"./archive/allNewsTrain{kind}.csv"):
+def unbalance(df, labels, kind = 0, force = False):
+    if os.path.exists(f"./archive/allNewsTrain{kind}.csv") and not force:
         df = pd.read_csv(f"./archive/allNewsTrain{kind}.csv")
         labels = df.pop('label')
     else:
-        toDrop = df[labels == kind].sample(frac=.5).index
+        toDrop = labels[labels==kind].sample(frac=.5).index
         df.drop(toDrop, inplace=True)
         labels.drop(toDrop, inplace=True)
         df1 = df
-        df1['label'] = labels
+        # df1['label'] = labels
         df1.to_csv(f'./archive/allNewsTrain{kind}.csv', index=False)
     
     return (df, labels)
