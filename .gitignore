@@ -2,11 +2,9 @@ Assigment1/.DS_Store
 .DS_Store
 Assigment1/samples/*
 Assignment3/__pycache__/*
-Assignment3/ktModels/Balanced*/
-Assignment3/ktModels/Unbalanced*/
-Assignment3/ktModels/images/
-Assignment3/ourModels/images/
-Assignment3/ourModelsLSTM/images/
-Assignment3/archive/Fake.csv
-Assignment3/archive/True.csv
-Assignment3/embeddings*
+Assignment3/ktModels/*
+Assignment3/ourModels/*
+Assignment3/ourModelsLSTM/*
+Assignment3/archive/
+Assignment3/embeddings/*
+Assignment3/tokenizers/*
